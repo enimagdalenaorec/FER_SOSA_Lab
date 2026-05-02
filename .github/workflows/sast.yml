@@ -10,4 +10,4 @@ jobs:
       - name: Install Bandit
         run: pip install bandit
       - name: Run Bandit
-        run: bandit -r datavault-app/ --severity-level high --exit-code 1   # omogucava prekid ako se pronađu ranjivosti visokog nivoa
+        run: bandit -r datavault-app/ --severity-level high || exit 1
