@@ -1,0 +1,13 @@
+name: SAST scan
+
+on: [push]
+
+jobs:
+  bandit-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Bandit
+        run: pip install bandit
+      - name: Run Bandit
+        run: bandit -r . --severity-level high --exit-code 1
