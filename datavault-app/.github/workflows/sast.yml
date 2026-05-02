@@ -10,4 +10,4 @@ jobs:
       - name: Install Bandit
         run: pip install bandit
       - name: Run Bandit
-        run: bandit -r . --severity-level high --exit-code 1
+        run: bandit -r . --severity-level high --exit-code 1   # omogucava prekid ako se pronađu ranjivosti visokog nivoa
